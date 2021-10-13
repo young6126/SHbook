@@ -8,28 +8,28 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView36"
+        android:id="@+id/condition"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="상태 최상"
         android:textColor="#E91E63"
         android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/textView35"
-        app:layout_constraintTop_toBottomOf="@+id/textView35" />
+        app:layout_constraintStart_toStartOf="@+id/sellPrice"
+        app:layout_constraintTop_toBottomOf="@+id/sellPrice" />
 
     <TextView
-        android:id="@+id/textView35"
+        android:id="@+id/sellPrice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="판매가 5,000원"
         android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/textView34"
-        app:layout_constraintTop_toBottomOf="@+id/textView34" />
+        app:layout_constraintStart_toStartOf="@+id/seller"
+        app:layout_constraintTop_toBottomOf="@+id/seller" />
 
     <TextView
-        android:id="@+id/textView34"
+        android:id="@+id/seller"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -116,7 +116,7 @@
         app:srcCompat="?attr/homeAsUpIndicator" />
 
     <TextView
-        android:id="@+id/textView39"
+        android:id="@+id/sellerInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -130,7 +130,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView16" />
 
     <TextView
-        android:id="@+id/textView43"
+        android:id="@+id/sellInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -138,35 +138,35 @@
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/textView42"
-        app:layout_constraintTop_toBottomOf="@+id/textView42" />
+        app:layout_constraintStart_toStartOf="@+id/inquire"
+        app:layout_constraintTop_toBottomOf="@+id/inquire" />
 
     <TextView
-        android:id="@+id/textView40"
+        android:id="@+id/sellerName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="판매자1"
-        app:layout_constraintStart_toStartOf="@+id/textView39"
-        app:layout_constraintTop_toBottomOf="@+id/textView39" />
+        app:layout_constraintStart_toStartOf="@+id/sellerInfo"
+        app:layout_constraintTop_toBottomOf="@+id/sellerInfo" />
 
     <TextView
-        android:id="@+id/textView42"
+        android:id="@+id/inquire"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="판매자에게 문의하기"
         android:textColor="#03A9F4"
-        app:layout_constraintStart_toStartOf="@+id/textView40"
-        app:layout_constraintTop_toBottomOf="@+id/textView40" />
+        app:layout_constraintStart_toStartOf="@+id/sellerName"
+        app:layout_constraintTop_toBottomOf="@+id/sellerName" />
 
     <TextView
-        android:id="@+id/textView44"
+        android:id="@+id/sellText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="특이사항 : 책 표지면에 살짝 손상이 있습니다. 사진 \n참고해주세요."
-        app:layout_constraintStart_toStartOf="@+id/textView43"
-        app:layout_constraintTop_toBottomOf="@+id/textView43" />
+        app:layout_constraintStart_toStartOf="@+id/sellInfo"
+        app:layout_constraintTop_toBottomOf="@+id/sellInfo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

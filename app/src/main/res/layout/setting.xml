@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/profileText1"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginStart="48dp"
@@ -26,7 +26,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/profileText2"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginTop="12dp"
@@ -35,11 +35,11 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintStart_toStartOf="@+id/profileText1"
+        app:layout_constraintTop_toBottomOf="@+id/profileText1" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout2"
+        android:id="@+id/myProfile"
         android:layout_width="361dp"
         android:layout_height="100dp"
         android:layout_marginTop="20dp"
@@ -47,10 +47,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.527"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4">
+        app:layout_constraintTop_toBottomOf="@+id/profileText2">
 
         <TextView
-            android:id="@+id/myId"
+            android:id="@+id/myIdText1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -63,7 +63,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView12"
+            android:id="@+id/myIdText2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -72,21 +72,21 @@
             android:text="프로필 및 정보를 조회 및 수정할 수 있습니다."
             android:textSize="12sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/myId" />
+            app:layout_constraintTop_toBottomOf="@+id/myIdText1" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout3"
+        android:id="@+id/myDeal"
         android:layout_width="361dp"
         android:layout_height="100dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/edittext_round"
-        app:layout_constraintEnd_toEndOf="@+id/constraintLayout2"
-        app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+        app:layout_constraintEnd_toEndOf="@+id/myProfile"
+        app:layout_constraintStart_toStartOf="@+id/myProfile"
+        app:layout_constraintTop_toBottomOf="@+id/myProfile">
 
         <TextView
-            android:id="@+id/textView13"
+            android:id="@+id/myDealText1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -99,7 +99,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView16"
+            android:id="@+id/myDealText2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -108,15 +108,15 @@
             android:text="내가 거래한 책들을 조회할 수 있습니다."
             android:textSize="12sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+            app:layout_constraintTop_toBottomOf="@+id/myDealText1" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="@+id/constraintLayout2"
-        app:layout_constraintTop_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="@+id/myProfile"
+        app:layout_constraintTop_toTopOf="@+id/profileText1"
         app:srcCompat="@android:drawable/ic_menu_revert" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/loginText1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
@@ -20,18 +20,18 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/loginText2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="중고서적 어플리케이션을 \n이용하기 위해선 로그인이 필요합니다."
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/textView7"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        app:layout_constraintStart_toStartOf="@+id/loginText1"
+        app:layout_constraintTop_toBottomOf="@+id/loginText1" />
 
     <EditText
-        android:id="@+id/editTextTextPassword2"
+        android:id="@+id/idEdit"
         android:layout_width="315dp"
         android:layout_height="50dp"
         android:layout_marginStart="48dp"
@@ -48,45 +48,10 @@
         android:paddingBottom="15dp"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="52dp"
-        android:text="회원이 아니신가요? 회원가입"
-        android:textColor="#2196F3"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="로그인"
-        android:textStyle="bold"
-        app:backgroundTint="#03A9F4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView37" />
-
-    <TextView
-        android:id="@+id/textView37"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="아이디 혹은 비밀번호가 틀렸습니다."
-        android:textColor="#E91E63"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword3" />
+        app:layout_constraintTop_toBottomOf="@+id/loginText2" />
 
     <EditText
-        android:id="@+id/editTextTextPassword3"
+        android:id="@+id/pwEdit"
         android:layout_width="315dp"
         android:layout_height="50dp"
         android:layout_marginTop="8dp"
@@ -102,6 +67,41 @@
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
+        app:layout_constraintTop_toBottomOf="@+id/idEdit" />
+
+    <TextView
+        android:id="@+id/idWarning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="아이디 혹은 비밀번호가 틀렸습니다."
+        android:textColor="#E91E63"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pwEdit" />
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="로그인"
+        android:textStyle="bold"
+        app:backgroundTint="#03A9F4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idWarning" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="52dp"
+        android:text="회원이 아니신가요? 회원가입"
+        android:textColor="#2196F3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

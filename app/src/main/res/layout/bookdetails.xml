@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bookIntro"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
@@ -19,7 +20,7 @@
         app:srcCompat="@android:drawable/ic_menu_revert" />
 
     <ImageView
-        android:id="@+id/imageView8"
+        android:id="@+id/bookImg"
         android:layout_width="match_parent"
         android:layout_height="297dp"
         android:layout_marginTop="24dp"
@@ -37,10 +38,10 @@
         android:background="#f5f5f5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView8">
+        app:layout_constraintTop_toBottomOf="@+id/bookImg">
 
         <TextView
-            android:id="@+id/textView29"
+            android:id="@+id/bookTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -53,7 +54,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView30"
+            android:id="@+id/bookSub"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -61,10 +62,10 @@
             android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView29" />
+            app:layout_constraintTop_toBottomOf="@+id/bookTitle" />
 
         <TextView
-            android:id="@+id/textView31"
+            android:id="@+id/fixedPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -72,12 +73,12 @@
             android:textColor="#80191919"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/textView29"
-            app:layout_constraintStart_toStartOf="@+id/textView29"
-            app:layout_constraintTop_toBottomOf="@+id/textView30" />
+            app:layout_constraintEnd_toEndOf="@+id/bookTitle"
+            app:layout_constraintStart_toStartOf="@+id/bookTitle"
+            app:layout_constraintTop_toBottomOf="@+id/bookSub" />
 
         <TextView
-            android:id="@+id/textView32"
+            android:id="@+id/avgPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -87,7 +88,7 @@
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView31" />
+            app:layout_constraintTop_toBottomOf="@+id/fixedPrice" />
 
         <TextView
             android:id="@+id/textView33"
@@ -101,7 +102,7 @@
             android:text="부끄러운 하나의 쉬이 된 별에도 동경과 아름다운 멀리 이름과 \n있습니다. 비둘기, 속의 새워 시와 이제 이름과, 까닭입니다. \n당신은 풀이 나의 까닭 부끄러운 하나의 쉬이 된 별에도 \n동경과 아름다운 멀리 이름과 있습니다. 비둘기, 속의 새워 \n시와 이제 이름과, 까닭입니다. 당신은 풀이.. 자세히 보기"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView32" />
+            app:layout_constraintTop_toBottomOf="@+id/avgPrice" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -131,7 +132,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView34"
+            android:id="@+id/seller"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -145,24 +146,24 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView35"
+            android:id="@+id/sellPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="판매가 5,000원"
             android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="@+id/textView34"
-            app:layout_constraintTop_toBottomOf="@+id/textView34" />
+            app:layout_constraintStart_toStartOf="@+id/seller"
+            app:layout_constraintTop_toBottomOf="@+id/seller" />
 
         <TextView
-            android:id="@+id/textView36"
+            android:id="@+id/condition"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="상태 최상"
             android:textColor="#E91E63"
             android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="@+id/textView35"
-            app:layout_constraintTop_toBottomOf="@+id/textView35" />
+            app:layout_constraintStart_toStartOf="@+id/sellPrice"
+            app:layout_constraintTop_toBottomOf="@+id/sellPrice" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
