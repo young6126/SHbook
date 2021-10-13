@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">SHbook</string>
+    <string name="Logo">Logo</string>
+    <string name="test">"중고서적
+        앱입니다."</string>
 </resources>
