@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/searchEdittext"
         android:layout_width="361dp"
         android:layout_height="50dp"
         android:layout_marginTop="48dp"
@@ -32,13 +32,13 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="12dp"
         android:layout_marginRight="12dp"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextTextPassword"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
-        app:layout_constraintTop_toTopOf="@+id/editTextTextPassword"
+        app:layout_constraintBottom_toBottomOf="@+id/searchEdittext"
+        app:layout_constraintEnd_toEndOf="@+id/searchEdittext"
+        app:layout_constraintTop_toTopOf="@+id/searchEdittext"
         app:srcCompat="@android:drawable/ic_menu_search" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/searchResultText1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -46,7 +46,7 @@
         android:textColor="@color/black"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="@+id/constraintLayout"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/searchEdittext" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -56,7 +56,7 @@
         android:background="@drawable/edittext_round"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10">
+        app:layout_constraintTop_toBottomOf="@+id/searchResultText1">
 
         <ImageView
             android:id="@+id/imageView12"
