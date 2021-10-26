@@ -24,7 +24,6 @@
         android:layout_marginStart="48dp"
         android:layout_marginLeft="48dp"
         android:layout_marginTop="48dp"
-        android:letterSpacing=""
         android:lineSpacingExtra="-5sp"
         android:text="이시호 님,\n안녕하세요."
         android:textColor="@color/black"
