@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:text="중고도서 매입가 검색"
+        android:textSize="40sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:background="#2196F3"
+        android:id="@+id/reload"/>
+
+    <TextView
+        android:id="@+id/textBox"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="text" />
+
+</LinearLayout>
