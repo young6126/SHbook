@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+
+    >
 
     <TextView
         android:id="@+id/sellingText1"
@@ -38,6 +39,7 @@
         android:layout_marginBottom="240dp"
         android:letterSpacing="-0.01"
         android:text="바코드로 책 제목 입력하기"
+        android:onClick="scanBarcode"
         android:textSize="18sp"
         android:textStyle="bold"
         app:backgroundTint="#03A9F4"
