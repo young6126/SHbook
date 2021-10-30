@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "738922267716",
+    "firebase_url": "https://bada-books-default-rtdb.firebaseio.com",
     "project_id": "bada-books",
     "storage_bucket": "bada-books.appspot.com"
   },
@@ -10,6 +11,35 @@
         "mobilesdk_app_id": "1:738922267716:android:940f8cb6cc0cca743d2811",
         "android_client_info": {
           "package_name": "com.example.shbook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "738922267716-l8r1qvsrapde59uovqliu4qqlqdglood.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrwwPjyutzxKnJ4URplB1fxO5-R5Rrju8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "738922267716-l8r1qvsrapde59uovqliu4qqlqdglood.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:738922267716:android:acfa37f4027390053d2811",
+        "android_client_info": {
+          "package_name": "example.zxing"
         }
       },
       "oauth_client": [
