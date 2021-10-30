@@ -1,12 +1,198 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
-    <ImageView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/status"
-        />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/signinText1"
+        tools:layout_editor_absoluteX="0dp">
 
-</LinearLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/View6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="최상"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/View7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="현 상태 : 새것에 가까운 책"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/View6"/>
+
+            <TextView
+                android:id="@+id/View8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="표지 : 변색 없음, 찟어진 흔적 없음\n닳은 흔적 없음, 낙서없음\n얼룩 없음, 양장본의 겉표지 있음"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/View7"/>
+
+            <TextView
+                android:id="@+id/View9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="책등/책배 : 변색 없음, 낙서 없음\n닳은 흑적 없음, 얼룩 없음"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/View8"/>
+
+            <TextView
+                android:id="@+id/View10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="내부/제본 상태 : 변색 없음, 낙서 없음, 변형 없음\n얼룩 없음,  접힌 흔적 없음\n제본 탈착 없음"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/View9"/>
+
+            <TextView
+                android:id="@+id/View11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="상"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/View10"/>
+
+            <TextView
+                android:id="@+id/View12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="현 상태 : 약간의 사용감은 있으나 깨끗한 책"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/View11"/>
+
+            <TextView
+                android:id="@+id/View13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="표지 : 희미한 변색이나 작은 얼룩이 있음\n찢어진 흔적 없음\n약간의 모서리 해짐\n낙서 없음, 양장본의  겉표지 있음"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/View12"/>
+
+            <TextView
+                android:id="@+id/View14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="책등/책배 : 희미한 변색이나 작은 얼룩이 있음\n약간의 닳은 흔적 있음\n낙서 없음"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/View13"/>
+
+            <TextView
+                android:id="@+id/View15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="내부/제본 상태 : 변색 없음, 낙서 없음, 변형 없음\n아주 약간의 접힌 흔적 있음\n얼룩 없음, 제본 탈착 없음"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/View14"/>
+
+            <TextView
+                android:id="@+id/View16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="중"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/View15"/>
+
+            <TextView
+                android:id="@+id/View17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="현 상태 : 사용감이 많으며 헌 느낌이 나는 책"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/View16"/>
+
+            <TextView
+                android:id="@+id/View18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="표지 : 전체적인 변색, 모서리 해짐, 오염 있음\n2cm 이하의 찢어짐, 래핑 흔적 있음\n낙서 있음, 양장본의 겉표지 없음"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/View17"/>
+
+            <TextView
+                android:id="@+id/View19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="책등/책배 : 전체적인 변색, 모서리 해짐 있음\n오염 있음, 낙서 있음(이름 포함)"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/View18"/>
+
+            <TextView
+                android:id="@+id/View20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="내부/제본 상태 : 변색 있음, 2cm 이하 찢어짐 있음\n5쪽 이하의 필기 및 밑줄 있음\n얼룩 및 오염 있음, 제본 탈착 없음"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/View19"/>
+
+            <TextView
+                android:id="@+id/View21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="매입 불가"
+                android:textColor="#FF0000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/View20"/>
+
+            <TextView
+                android:id="@+id/View22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="현 상태 : 독서 및 이용에 지장이 있는 책\n증정 도서/비매품"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/View21"/>
+
+            <TextView
+                android:id="@+id/View23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="표지 : 2cm 초과한 찢어짐 있음\n심한 오염 및 낙서 있음\n물에 젖은 흔적 있음"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/View22"/>
+
+            <TextView
+                android:id="@+id/View24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="책등/책배 : 심한 오염 있음, 심한 낙서 있음\n물에 젖은 흔적 있음"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/View23"/>
+
+            <TextView
+                android:id="@+id/View25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="내부/제본 상태 : 2cm 초과한 찢어짐, 5쪽 초과 낙서\n심한 오염이나 젖은 흔적 있음\n낙장 등의 제본불량, 분책 된 경우"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/View24"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
