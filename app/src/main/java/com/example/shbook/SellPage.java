@@ -50,6 +50,7 @@ public class SellPage extends AppCompatActivity {
     Document doc = null;
     String price;
     String num = "9788932917245"; //어린왕자예시 num은 인식변수로 가져올 것
+    String status[] = {"정가", "최상", "상", "중"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -177,8 +178,8 @@ public class SellPage extends AppCompatActivity {
                         price = ""; //contents의 내용이 배열로 담겨있을 수 있기에 배열 프린트 생성
                         int cnt = 0; //if문 세기위한 변수
                         for(Element element: contents) {
+                            price += status[cnt]+". "+element.text() + "\n";
                             cnt++;
-                            price += cnt+". "+element.text() + "\n";
                             if(cnt == 10)
                                 break;
                         }
