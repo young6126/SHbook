@@ -78,7 +78,8 @@
         android:textColor="#E91E63"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pwEdit" />
+        app:layout_constraintTop_toBottomOf="@+id/pwEdit"
+        tools:visibility="invisible" />
 
     <Button
         android:id="@+id/loginBtn"
