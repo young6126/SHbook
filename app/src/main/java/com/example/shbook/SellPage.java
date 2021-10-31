@@ -18,15 +18,19 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -35,11 +39,13 @@ import org.jsoup.select.Elements;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.UUID;
 
 public class SellPage extends AppCompatActivity {
 
     private FirebaseAuth mFirebaseAuth; //파이어베이스 인증처리
     private DatabaseReference mDatabaseRef; //실시간 데이터베이스
+
     private ImageView profilePic;
     public Uri imageUri;
     private FirebaseStorage storage;
@@ -53,9 +59,6 @@ public class SellPage extends AppCompatActivity {
     private FirebaseDatabase database = FirebaseDatabase.getInstance(); //데이터베이스에 접근할 수 있는 진입점 클래스
     private DatabaseReference databaseReference = database.getReference(); //실시간 데이터베이스주소 저장
 
-    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser(); //로그인한 유저의 정보 가져오기
-    String uid = user!= null ? user.getUid() : null;
-    DatabaseReference email = databaseReference.child(uid).child("email");
 
 
     View priceView;
@@ -266,26 +269,21 @@ public class SellPage extends AppCompatActivity {
         });
 
     }
-/*
-    public void Plus_sellbook(String user_id){
-        sellbook sellbook = new sellbook(a);
-        databaseReference.child("sell_book").child(price);
 
-    }
-*/
     //이미지 첨부
+
+
+
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+
         if (requestCode == REQUEST_CODE) {
             if (resultCode == RESULT_OK) {
                 try {
                     InputStream in = getContentResolver().openInputStream(data.getData());
-                 /*   final ProgressDialog pd = new ProgressDialog(this);
-                    pd.setTitle("이미지 로딩중..");
 
-                    StorageReference riversRef = storageReference.child("images/"+randomKey)
-*/
                     Bitmap img1 = BitmapFactory.decodeStream(in);
                     in.close();
 
