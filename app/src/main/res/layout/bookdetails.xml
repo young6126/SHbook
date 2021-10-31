@@ -8,164 +8,226 @@
     android:background="#FFFFFF"
     tools:context=".SearchMainActivity">
 
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_revert" />
-
-    <ImageView
-        android:id="@+id/bookImg"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="297dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/bookcover22" />
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-16dp">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout4"
-        android:layout_width="match_parent"
-        android:layout_height="268dp"
-        android:layout_marginTop="20dp"
-        android:background="#f5f5f5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bookImg">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/bookTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="결심만 하는 당신에게"
-            android:textColor="#000000"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:id="@+id/bookImg"
+                android:layout_width="match_parent"
+                android:layout_height="297dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/bookcover22" />
 
-        <TextView
-            android:id="@+id/bookSub"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="누군가 지음/가천출판사/2021.10.10"
-            android:textSize="12sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/bookTitle" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="268dp"
+                android:layout_marginTop="24dp"
+                android:background="#f5f5f5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bookImg">
 
-        <TextView
-            android:id="@+id/fixedPrice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="정가 9,000 원"
-            android:textColor="#80191919"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/bookTitle"
-            app:layout_constraintStart_toStartOf="@+id/bookTitle"
-            app:layout_constraintTop_toBottomOf="@+id/bookSub" />
+                <TextView
+                    android:id="@+id/bookTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="결심만 하는 당신에게"
+                    android:textColor="#000000"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/avgPrice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="평균중고가 5,000원"
-            android:textColor="#E91E63"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/fixedPrice" />
+                <TextView
+                    android:id="@+id/bookSub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="누군가 지음/가천출판사/2021.10.10"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/bookTitle" />
 
-        <TextView
-            android:id="@+id/textView33"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginLeft="24dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginRight="24dp"
-            android:text="부끄러운 하나의 쉬이 된 별에도 동경과 아름다운 멀리 이름과 \n있습니다. 비둘기, 속의 새워 시와 이제 이름과, 까닭입니다. \n당신은 풀이 나의 까닭 부끄러운 하나의 쉬이 된 별에도 \n동경과 아름다운 멀리 이름과 있습니다. 비둘기, 속의 새워 \n시와 이제 이름과, 까닭입니다. 당신은 풀이.. 자세히 보기"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/avgPrice" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/fixedPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="정가 9,000 원"
+                    android:textColor="#80191919"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/bookTitle"
+                    app:layout_constraintStart_toStartOf="@+id/bookTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/bookSub" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/seller1"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginTop="20dp"
-        android:background="#F5F5F5"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
+                <TextView
+                    android:id="@+id/avgPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="평균중고가 5,000원"
+                    android:textColor="#E91E63"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/fixedPrice" />
 
-        <Button
-            android:id="@+id/button9"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginLeft="24dp"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/edittext_round"
-            android:gravity="center"
-            android:text="아이콘"
-            android:textSize="12sp"
-            app:backgroundTint="#2196F3"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/textView33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginRight="24dp"
+                    android:text="부끄러운 하나의 쉬이 된 별에도 동경과 아름다운 멀리 이름과 \n있습니다. 비둘기, 속의 새워 시와 이제 이름과, 까닭입니다. \n당신은 풀이 나의 까닭 부끄러운 하나의 쉬이 된 별에도 \n동경과 아름다운 멀리 이름과 있습니다. 비둘기, 속의 새워 \n시와 이제 이름과, 까닭입니다. 당신은 풀이.. 자세히 보기"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/avgPrice" />
 
-        <TextView
-            android:id="@+id/seller"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-            android:text="판매자1"
-            android:textColor="#000000"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/button9"
-            app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <TextView
-            android:id="@+id/sellPrice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="판매가 5,000원"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="@+id/seller"
-            app:layout_constraintTop_toBottomOf="@+id/seller" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/seller1"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="24dp"
+                android:background="#F5F5F5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
 
-        <TextView
-            android:id="@+id/condition"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="상태 최상"
-            android:textColor="#E91E63"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="@+id/sellPrice"
-            app:layout_constraintTop_toBottomOf="@+id/sellPrice" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                <Button
+                    android:id="@+id/sellerimg1"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/edittext_round"
+                    android:gravity="center"
+                    android:text="아이콘"
+                    android:textSize="12sp"
+                    app:backgroundTint="#2196F3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/sellername1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="20dp"
+                    android:text="판매자1"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/sellerimg1"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/sellPrice1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="4dp"
+                    android:text="판매가 5,000원"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@+id/sellerimg1"
+                    app:layout_constraintTop_toBottomOf="@+id/sellername1" />
+
+                <TextView
+                    android:id="@+id/condition1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="4dp"
+                    android:text="상태 최상"
+                    android:textColor="#E91E63"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@+id/sellerimg1"
+                    app:layout_constraintTop_toBottomOf="@+id/sellPrice1" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/seller2"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="#F5F5F5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/seller1">
+
+                <Button
+                    android:id="@+id/sellerimg2"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/edittext_round"
+                    android:gravity="center"
+                    android:text="아이콘"
+                    android:textSize="12sp"
+                    app:backgroundTint="#2196F3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/sellername2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="20dp"
+                    android:text="판매자1"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/sellerimg2"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/sellPrice2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="4dp"
+                    android:text="판매가 5,000원"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@+id/sellerimg2"
+                    app:layout_constraintTop_toBottomOf="@+id/sellername2" />
+
+                <TextView
+                    android:id="@+id/condition2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="4dp"
+                    android:text="상태 최상"
+                    android:textColor="#E91E63"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@+id/sellerimg2"
+                    app:layout_constraintTop_toBottomOf="@+id/sellPrice2" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
