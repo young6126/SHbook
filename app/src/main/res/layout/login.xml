@@ -76,6 +76,7 @@
         android:layout_marginTop="8dp"
         android:text="아이디 혹은 비밀번호가 틀렸습니다."
         android:textColor="#E91E63"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pwEdit"

@@ -106,6 +106,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/seller1"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_marginTop="20dp"
@@ -166,4 +167,5 @@
             app:layout_constraintStart_toStartOf="@+id/sellPrice"
             app:layout_constraintTop_toBottomOf="@+id/sellPrice" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
