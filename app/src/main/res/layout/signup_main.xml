@@ -277,7 +277,7 @@
                 android:layout_marginTop="12dp"
                 android:background="@drawable/edittext_round"
                 android:ems="10"
-                android:hint="상세 주소를 입력해주세요."
+                android:hint="가장 좋아하는 장르를 선택해주세요"
                 android:inputType="number|text"
                 android:paddingLeft="15dp"
                 android:textSize="12sp"

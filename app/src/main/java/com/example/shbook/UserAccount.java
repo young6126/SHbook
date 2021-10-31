@@ -7,7 +7,10 @@ public class UserAccount {
     private String idToken; //Firebase Uid 고유토큰정보
     private String emailId; //이메일 아이디
     private String password; //비밀번호
+    private String address; //주소
     private String age; //나이
+    private String favorite; //좋아하는장르
+
 
     public UserAccount() { }  //Firebase 모델을 사용할때는 빈생성자가 무조건있어야함
 
@@ -22,4 +25,10 @@ public class UserAccount {
 
     public String getAge() { return age; }
     public void setAge(String age) { this.age = age; }
+
+    public String getAddress() { return address; }
+    public void setAddress(String address) { this.address = address; }
+
+    public String getFavorite() { return favorite; }
+    public void setFavorite(String favorite) { this.favorite = favorite; }
 }

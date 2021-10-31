@@ -29,6 +29,9 @@
 
         <activity android:name=".RegisterActivity">
         </activity>
+        <activity android:name=".AddressApiActivity">
+
+        </activity>
 
 
     </application>
