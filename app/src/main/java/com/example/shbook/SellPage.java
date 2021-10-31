@@ -1,21 +1,36 @@
 package com.example.shbook;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -24,8 +39,27 @@ import org.jsoup.select.Elements;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.UUID;
 
 public class SellPage extends AppCompatActivity {
+
+    private FirebaseAuth mFirebaseAuth; //파이어베이스 인증처리
+    private DatabaseReference mDatabaseRef; //실시간 데이터베이스
+
+    private ImageView profilePic;
+    public Uri imageUri;
+    private FirebaseStorage storage;
+    private StorageReference storageReference;
+    private EditText strPrice,userText;
+
+
+    //판매 세부사항 시트 중 DB에 받아올 데이터.
+    private Button mBtnSell; // 판매완료 버튼
+
+    private FirebaseDatabase database = FirebaseDatabase.getInstance(); //데이터베이스에 접근할 수 있는 진입점 클래스
+    private DatabaseReference databaseReference = database.getReference(); //실시간 데이터베이스주소 저장
+
+
 
     View priceView;
     View statusView;
@@ -50,6 +84,7 @@ public class SellPage extends AppCompatActivity {
     Document doc = null;
     String price;
     String num = "9788932917245"; //어린왕자예시 num은 인식변수로 가져올 것
+    String status[] = {"정가", "최상", "상", "중"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -177,8 +212,8 @@ public class SellPage extends AppCompatActivity {
                         price = ""; //contents의 내용이 배열로 담겨있을 수 있기에 배열 프린트 생성
                         int cnt = 0; //if문 세기위한 변수
                         for(Element element: contents) {
+                            price += status[cnt]+". "+element.text() + "\n";
                             cnt++;
-                            price += cnt+". "+element.text() + "\n";
                             if(cnt == 10)
                                 break;
                         }
@@ -196,11 +231,54 @@ public class SellPage extends AppCompatActivity {
             }
         });
 
+        //isbn,책 상태, 금액, 이미지 ,특이사항
+        mBtnSell = findViewById(R.id.nextBtn); //판매완료버튼
+        final RadioGroup bookStatus = (RadioGroup)findViewById(R.id.RgroupBookStatus);
+        final EditText bookPrice = findViewById(R.id.EditPrice);
+        final EditText User_Text = findViewById(R.id.EditInfo);
+
+
+        //버튼 누를시 데이터 베이스 연동 이벤트
+        mBtnSell.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               //인식받은 isbn값 ==num;
+                String strName = num;
+               //라디오그룹 버튼 값 스트링형식으로 받아오기
+                int status_id = bookStatus.getCheckedRadioButtonId();
+                RadioButton rb = (RadioButton) findViewById(status_id);
+                String strStatus = rb.getText().toString();
+                String strPrice = bookPrice.getText().toString();
+                String strText = User_Text.getText().toString();
+
+
+                //데이터베이스 처리 시작
+                //버튼으로 처리한 값을 파베 RDB로 넘기는 함수
+                databaseReference.child("Book_Sell").child("isbn").setValue(num);//책 isbn
+                databaseReference.child("Book_Sell").child("status").setValue(strStatus);//책 상태
+                databaseReference.child("Book_Sell").child("price").setValue(strPrice);//책 금액
+                databaseReference.child("Book_Sell").child("text").setValue(strText);//사용자특이사항텍스트
+
+                /* databaseReference.child("Book_Sell").child("img").setValue();//갤러리이미지
+                 */
+
+                Toast.makeText(SellPage.this, "도서등록에 성공하셨습니다", Toast.LENGTH_SHORT).show();
+
+
+            }
+        });
+
     }
+
     //이미지 첨부
+
+
+
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+
         if (requestCode == REQUEST_CODE) {
             if (resultCode == RESULT_OK) {
                 try {
