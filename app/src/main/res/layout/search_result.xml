@@ -37,26 +37,15 @@
         app:layout_constraintTop_toTopOf="@+id/searchEdittext"
         app:srcCompat="@android:drawable/ic_menu_search" />
 
-    <TextView
-        android:id="@+id/searchResultText1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="'책 이름1'로 검색한 결과는 9건이에요."
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="@+id/constraintLayout"
-        app:layout_constraintTop_toBottomOf="@+id/searchEdittext" />
-
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
+        android:id="@+id/result1"
         android:layout_width="361dp"
         android:layout_height="200dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/edittext_round"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/searchResultText1">
+        app:layout_constraintTop_toBottomOf="@+id/searchEdittext">
 
         <ImageView
             android:id="@+id/imageView12"
@@ -104,13 +93,14 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/result2"
         android:layout_width="361dp"
         android:layout_height="200dp"
         android:layout_marginTop="12dp"
         android:background="@drawable/edittext_round"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+        app:layout_constraintTop_toBottomOf="@+id/result1">
 
         <ImageView
             android:id="@+id/imageView3"

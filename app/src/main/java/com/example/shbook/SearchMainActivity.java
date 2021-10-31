@@ -1,21 +1,17 @@
 package com.example.shbook;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.zxing.client.android.Intents;
-import com.google.zxing.integration.android.IntentIntegrator;
-import com.google.zxing.integration.android.IntentResult;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class SearchMainActivity extends AppCompatActivity {
     private long backKeyPressedTime = 0;    // '뒤로' 버튼을 클릭했을 때의 시간
@@ -23,22 +19,37 @@ public class SearchMainActivity extends AppCompatActivity {
     private Toast toast;
     Button btnSell;
     EditText searchEdit;
-
+    TextView profileText1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.search_main);
-
+        SharedPreferences pref = getSharedPreferences("LoginData",MODE_PRIVATE);
+        String loginData = pref.getString("ID","사용자") + "님, \n안녕하세요.";
         btnSell = (Button)findViewById(R.id.sellBtn1);
         searchEdit = (EditText)findViewById(R.id.searchEdittext);
-
-
+        profileText1 = (TextView)findViewById(R.id.profileText1);
+        profileText1.setText(loginData);
         btnSell.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), SellMain.class);
                 startActivity(intent);
                 finish();
+            }
+        });
+        searchEdit.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_SEARCH) {
+                    final String text = searchEdit.getText().toString();
+                    Intent intent = new Intent(getApplicationContext(),SearchResultActivity.class);
+                    intent.putExtra("Searchhint",text);
+                    startActivity(intent);
+                    return true;
+                }
+                return false;
             }
         });
     }

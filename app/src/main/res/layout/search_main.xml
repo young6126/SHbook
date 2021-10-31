@@ -28,10 +28,7 @@
         android:id="@+id/sellBtn1"
         android:layout_width="75dp"
         android:layout_height="75dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginLeft="100dp"
         android:layout_marginEnd="44dp"
-        android:layout_marginRight="44dp"
         android:background="@drawable/edittext_round"
         android:text="판매"
         android:textSize="18sp"
@@ -39,7 +36,6 @@
         app:backgroundTint="#03A9F4"
         app:layout_constraintBottom_toBottomOf="@+id/profileText1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/profileText1"
         app:layout_constraintTop_toTopOf="@+id/profileText1" />
 
     <EditText
@@ -51,6 +47,7 @@
         android:ems="10"
         android:hint="검색할 책 이름을 입력하세요."
         android:inputType="text"
+        android:imeOptions="actionSearch"
         android:padding="15dp"
         android:paddingLeft="15dp"
         android:paddingTop="15dp"
@@ -87,7 +84,7 @@
         app:layout_constraintTop_toBottomOf="@+id/searchEdittext" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
+        android:id="@+id/result1"
         android:layout_width="321dp"
         android:layout_height="200dp"
         android:layout_marginTop="24dp"
@@ -181,7 +178,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/result1" />
 
     <Button
         android:id="@+id/button7"
