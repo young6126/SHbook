@@ -5,11 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context=".MainActivity">
+    tools:context=".SearchMainActivity">
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="250dp"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginTop="150dp"
         android:layout_marginBottom="86dp"
@@ -19,17 +19,16 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo2_500x500" />
+        app:srcCompat="@drawable/seabook" />
 
     <TextView
         android:id="@+id/loadText1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
         android:layout_marginBottom="226dp"
         android:lineSpacingExtra="-5sp"
-        android:text="중고서적 \n어플리케이션입니다."
+        android:text="중고서적 어플리케이션\n바다도서입니다."
         android:textColor="@color/black"
         android:textSize="30sp"
         android:textStyle="bold"
