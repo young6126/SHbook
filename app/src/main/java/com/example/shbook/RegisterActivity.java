@@ -93,26 +93,26 @@ public class RegisterActivity extends AppCompatActivity {
                             String data = intent.getExtras().getString("data");
                             if (data != null) {
                                 mEtMainAdress.setText(data);
+                            }
                         }
                     }
-                }
-        });
+                });
 
 
         mEtMainAdress.setFocusable(false); // 메인주소 클릭 안되게 막음.
 
         mEtMainAdress.setOnClickListener(new View.OnClickListener() {
-                @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
-                @Override
-                public void onClick(View view) {
-                        //화면전환 애니메이션 없애기
-                        overridePendingTransition(0,0);
+            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+            @Override
+            public void onClick(View view) {
+                //화면전환 애니메이션 없애기
+                overridePendingTransition(0, 0);
 
-                        //주소결과
-                        Intent i = new Intent(getApplicationContext(), AddressApiActivity.class);
-                        i.putExtra("requestCode",SEARCH_ADDRESS_ACTIVITY);
-                        launcher.launch(i);
-                }
+                //주소결과
+                Intent i = new Intent(getApplicationContext(), AddressApiActivity.class);
+                i.putExtra("requestCode", SEARCH_ADDRESS_ACTIVITY);
+                launcher.launch(i);
+            }
         });
         mBtnRegister.setOnClickListener(new View.OnClickListener() {
                                             @Override
@@ -160,6 +160,6 @@ public class RegisterActivity extends AppCompatActivity {
                                                 );
                                             }
                                         });
-
     }
 }
+

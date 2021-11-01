@@ -59,8 +59,6 @@ public class SellPage extends AppCompatActivity {
     private FirebaseDatabase database = FirebaseDatabase.getInstance(); //데이터베이스에 접근할 수 있는 진입점 클래스
     private DatabaseReference databaseReference = database.getReference(); //실시간 데이터베이스주소 저장
 
-
-
     View priceView;
     View statusView;
 
