@@ -32,6 +32,6 @@
         <activity android:name=".SellerDetailsActivity"/>
         <activity android:name=".SellMain"/>
         <activity android:name=".SellPage"/>
-    </application>
+     </application>
 
 </manifest>
