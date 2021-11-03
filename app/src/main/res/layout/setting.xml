@@ -12,10 +12,9 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
         android:layout_marginTop="48dp"
         android:lineSpacingExtra="-5sp"
-        android:text="이시호 님,\n안녕하세요."
+        android:text="young6126 님,\n안녕하세요."
         android:textColor="@color/black"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -109,13 +108,5 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/myDealText1" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="@+id/myProfile"
-        app:layout_constraintTop_toTopOf="@+id/profileText1"
-        app:srcCompat="@android:drawable/ic_menu_revert" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
