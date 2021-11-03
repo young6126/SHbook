@@ -128,7 +128,7 @@
                 android:background="@drawable/edittext_round"
                 android:ems="10"
                 android:hint="책 제목 직접입력시 여기에 입력해주세요"
-                android:inputType="textWebPassword"
+                android:inputType="textWebEditText"
                 android:paddingLeft="15dp"
                 android:textSize="12sp"
                 app:layout_constraintStart_toStartOf="parent"

@@ -50,7 +50,7 @@ public class SellPage extends AppCompatActivity {
     public Uri imageUri;
     private FirebaseStorage storage;
     private StorageReference storageReference;
-    private EditText strPrice,userText;
+    private EditText strPrice, userText;
 
 
     //판매 세부사항 시트 중 DB에 받아올 데이터.
@@ -78,8 +78,10 @@ public class SellPage extends AppCompatActivity {
     TextView tvStatus;
 
     TextView textView;
+    String book_name;
     Elements contents;
     Document doc = null;
+    Document doc1 = null;
     String price;
     String num = "9788932917245"; //어린왕자예시 num은 인식변수로 가져올 것
     String status[] = {"정가", "최상", "상", "중"};
@@ -89,12 +91,30 @@ public class SellPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sell_page);
 
+
         priceCompare = (Button)findViewById(R.id.BtnPriceCheck);
 
         Intent intent = getIntent();
         String requsetCode = intent.getStringExtra("REQUEST_CODE");
 
         num = requsetCode;  //인식한 isbn 코드로 변경
+
+            new Thread() {
+                @Override
+                public void run() {
+                    try {
+                        Document doc1 = (Document) Jsoup.connect("https://www.aladin.co.kr/shop/usedshop/wc2b_search.aspx?ActionType=1&SearchTarget=All&KeyWord=" + num + "&x=0&y=0/").get();
+                        Elements bookName = doc1.select("a.c2b_b"); //제목
+                        book_name = bookName.text().toString();
+                        EditText BN = (EditText) findViewById(R.id.EditBookTitle);
+                        BN.setText(book_name);
+
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }.start();
+
 
         bookStatus = (Button)findViewById(R.id.BtnBookStatusGuide);
         priceCompare = (Button)findViewById(R.id.BtnPriceCheck);
@@ -200,7 +220,9 @@ public class SellPage extends AppCompatActivity {
                         try {
                             doc = (Document) Jsoup.connect("https://www.aladin.co.kr/shop/usedshop/wc2b_search.aspx?ActionType=1&SearchTarget=All&KeyWord="+num+"&x=0&y=0/").get();
                             //jsoup 링크연결 url에 있는 모든 내용을 .get()으로 doc 에 수집
-                            contents = doc.select("td.c2b_tablet3"); //크롤링된 doc 내용 중 td.c2b_table3(가격위치) 에있는 내용만 contents로 추출
+                            contents = doc.select("td.c2b_tablet3");
+
+                            //크롤링된 doc 내용 중 td.c2b_table3(가격위치) 에있는 내용만 contents로 추출
 
 
                         } catch (IOException e) {
@@ -228,6 +250,7 @@ public class SellPage extends AppCompatActivity {
                 dlg.show();
             }
         });
+
 
         //isbn,책 상태, 금액, 이미지 ,특이사항
         mBtnSell = findViewById(R.id.nextBtn); //판매완료버튼
