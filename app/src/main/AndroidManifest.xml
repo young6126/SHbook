@@ -30,6 +30,7 @@
         <activity android:name=".SearchResultActivity"/>
         <activity android:name=".BookDetailsActivity"/>
         <activity android:name=".SellerDetailsActivity"/>
+        <activity android:name=".SettingActivity"/>
         <activity android:name=".SellMain"/>
         <activity android:name=".SellPage"/>
      </application>

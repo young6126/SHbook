@@ -35,7 +35,13 @@ public class SearchMainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), SellMain.class);
                 startActivity(intent);
-                finish();
+            }
+        });
+        profileText1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), SettingActivity.class);
+                startActivity(intent);
             }
         });
         searchEdit.setOnEditorActionListener(new TextView.OnEditorActionListener() {
