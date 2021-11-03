@@ -32,6 +32,8 @@
         <activity android:name=".SellerDetailsActivity"/>
         <activity android:name=".SellMain"/>
         <activity android:name=".SellPage"/>
+        <activity android:name=".RecommendBook1"/>
+        <activity android:name=".RecommendBookSell"/>
      </application>
 
 </manifest>

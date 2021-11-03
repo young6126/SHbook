@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,6 +21,8 @@ public class SearchMainActivity extends AppCompatActivity {
     Button btnSell;
     EditText searchEdit;
     TextView profileText1;
+    ImageView imgRecommendBook;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +53,16 @@ public class SearchMainActivity extends AppCompatActivity {
                     return true;
                 }
                 return false;
+            }
+        });
+        //도서 추천 이미지 크릭 시 액티비티 전환
+        imgRecommendBook = (ImageView)findViewById(R.id.bookimg1);
+        imgRecommendBook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), RecommendBook1.class);
+                startActivity(intent);
+                finish();
             }
         });
     }
