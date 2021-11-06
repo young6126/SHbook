@@ -46,11 +46,9 @@ public class SellPage extends AppCompatActivity {
     private FirebaseAuth mFirebaseAuth; //파이어베이스 인증처리
     private DatabaseReference mDatabaseRef; //실시간 데이터베이스
 
-    private ImageView profilePic;
-    public Uri imageUri;
-    private FirebaseStorage storage;
-    private StorageReference storageReference;
-    private EditText strPrice, userText;
+    FirebaseStorage storage = FirebaseStorage.getInstance(); //스토리지 인스턴스 생성
+    StorageReference storageRef = storage.getReference(); //스토리지참조
+    Uri uri;
 
 
     //판매 세부사항 시트 중 DB에 받아올 데이터.
@@ -285,7 +283,16 @@ public class SellPage extends AppCompatActivity {
 
                 Toast.makeText(SellPage.this, "도서등록에 성공하셨습니다", Toast.LENGTH_SHORT).show();
 
+                 //판매페이지 값 intent 로 넘기기
+                Intent intent2 = new Intent(getApplicationContext(), SellerDetailsActivity.class);
+                intent2.putExtra("text",strText);
+                startActivity(intent2);
+                finish();
 
+                Intent intent3 = new Intent(getApplicationContext(), SellerDetailsActivity.class);
+                intent3.putExtra("price",strPrice);
+                startActivity(intent3);
+                finish();
             }
         });
 
@@ -308,6 +315,7 @@ public class SellPage extends AppCompatActivity {
                     Bitmap img1 = BitmapFactory.decodeStream(in);
                     in.close();
 
+
                     if(cnt == 0){
                         bookImage.setImageBitmap(img1);
                         cnt++;
@@ -328,7 +336,15 @@ public class SellPage extends AppCompatActivity {
                 }
             } else if (resultCode == RESULT_CANCELED) {
                 Toast.makeText(this, "사진 선택 취소", Toast.LENGTH_LONG).show();
+
             }
+            /*String filename = "book"+num+".jpg"; //파이어스토리지 작성중..
+            Uri file = uri;
+            Log.d("책이미지",String.valueOf(file));
+            StorageReference riversRef = storageRef.child("book_img/"+filename);
+            UploadTask uploadTask = riversRef.putFile(file);
+*/
+
         }
     }
 }
