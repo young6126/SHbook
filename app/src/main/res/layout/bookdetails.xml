@@ -25,7 +25,7 @@
                 android:layout_marginTop="24dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/bookcover22" />
+                app:srcCompat="@drawable/sell_book" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout4"
@@ -41,7 +41,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="결심만 하는 당신에게"
+                    android:text="Android Studio를 활용한 \n   안드로이드 프로그래밍"
                     android:textColor="#000000"
                     android:textSize="24sp"
                     android:textStyle="bold"
@@ -54,7 +54,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="누군가 지음/가천출판사/2021.10.10"
+                    android:text="우재남, 박길식 지음/한빛 아카데미/2021.01.05"
                     android:textSize="12sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -65,7 +65,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="정가 9,000 원"
+                    android:text="정가 32,000 원"
                     android:textColor="#80191919"
                     android:textSize="18sp"
                     android:textStyle="bold"
@@ -78,7 +78,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="평균중고가 5,000원"
+                    android:text="평균중고가 7,200원"
                     android:textColor="#E91E63"
                     android:textSize="18sp"
                     android:textStyle="bold"
@@ -95,7 +95,7 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="24dp"
                     android:layout_marginRight="24dp"
-                    android:text="부끄러운 하나의 쉬이 된 별에도 동경과 아름다운 멀리 이름과 \n있습니다. 비둘기, 속의 새워 시와 이제 이름과, 까닭입니다. \n당신은 풀이 나의 까닭 부끄러운 하나의 쉬이 된 별에도 \n동경과 아름다운 멀리 이름과 있습니다. 비둘기, 속의 새워 \n시와 이제 이름과, 까닭입니다. 당신은 풀이.. 자세히 보기"
+                    android:text="기본적인 프로그래밍을 접해본 독자라면 안드로이드에\n 꼭 필요한 Java기초부터 안드로이드 앱 개발까지학습 \n가능하도록 구성되어 있다."
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/avgPrice" />
