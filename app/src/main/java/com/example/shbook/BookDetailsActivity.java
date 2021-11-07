@@ -19,11 +19,11 @@ public class BookDetailsActivity extends AppCompatActivity {
     ConstraintLayout seller1;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.bookdetails);
 
+/*
         Intent intent = getIntent();
         String user_book_condition = intent.getStringExtra("condition");
 
@@ -55,3 +55,4 @@ public class BookDetailsActivity extends AppCompatActivity {
         });
     }
 }
+
