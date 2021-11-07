@@ -67,7 +67,6 @@ public class SearchMainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), RecommendBook1.class);
                 startActivity(intent);
-                finish();
             }
         });
     }
@@ -89,7 +88,6 @@ public class SearchMainActivity extends AppCompatActivity {
             // 앱을 종료한다.
             this.finish();
         }
-
     }
     public void showMessage() {
         toast = Toast.makeText(this, "종료하시려면 뒤로가기를 한번 더 눌러주세요.", Toast.LENGTH_SHORT);

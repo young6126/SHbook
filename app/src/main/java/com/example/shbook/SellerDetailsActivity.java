@@ -72,13 +72,13 @@ public class SellerDetailsActivity extends AppCompatActivity {
         String user_book_price = intent1.getStringExtra("price");
 
         TextView UBP = (TextView) findViewById(R.id.sellPrice);
-        UBP.setText("판매가"+user_book_price+"원");
+        UBP.setText("판매가 "+user_book_price+"원");
 
         Intent intent2 = getIntent();
         String user_book_condition = intent.getStringExtra("condition");
 
         TextView UBC = (TextView) findViewById(R.id.condition);
-        UBC.setText("상태\t"+user_book_condition);
+        UBC.setText("상태 "+user_book_condition);
 
 */
 
