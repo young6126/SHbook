@@ -283,28 +283,32 @@ public class SellPage extends AppCompatActivity {
 
                 Toast.makeText(SellPage.this, "도서등록에 성공하셨습니다", Toast.LENGTH_SHORT).show();
 
-                //판매페이지 값 intent 로 넘기기
-                Intent intent2 = new Intent(getApplicationContext(), SellerDetailsActivity.class);
-                intent2.putExtra("text", strText);
-                intent2.putExtra("price", strPrice);
-                intent2.putExtra("condition",strStatus);
+                Intent intent2 = new Intent(getApplicationContext(), SearchMainActivity.class);
                 startActivity(intent2);
-                finish();
 
-                Intent intent3 = new Intent(getApplicationContext(), BookDetailsActivity.class);
+
+/*
+                //판매페이지 값 intent 로 넘기기
+                Intent intent3 = new Intent(getApplicationContext(), SellerDetailsActivity.class);
+                intent3.putExtra("text", strText);
+                intent3.putExtra("price", strPrice);
                 intent3.putExtra("condition",strStatus);
-                intent3.putExtra("price",strPrice);
                 startActivity(intent3);
-                finish();
+
+                Intent intent4 = new Intent(getApplicationContext(), BookDetailsActivity.class);
+                intent4.putExtra("condition",strStatus);
+                intent4.putExtra("price",strPrice);
+                startActivity(intent4);
+
+ */
+
             }
         });
+
 
     }
 
     //이미지 첨부
-
-
-
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
