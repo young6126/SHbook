@@ -26,6 +26,13 @@ public class SearchResultActivity extends AppCompatActivity {
         setContentView(R.layout.search_result);
         result1 = (ConstraintLayout)findViewById(R.id.result1);
         result2 = (ConstraintLayout)findViewById(R.id.result2);
+
+        //검색창에 검색한 내용 유지
+        Intent intent = getIntent();
+        String searchhint = intent.getStringExtra("SearcName");
+        searchEdit = (EditText)findViewById(R.id.searchEdittext);
+        searchEdit.setText(searchhint);
+
         result1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

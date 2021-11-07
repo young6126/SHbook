@@ -66,6 +66,19 @@
         app:srcCompat="@drawable/androidbook" />
 
     <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="160dp"
+        android:layout_height="224dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView16"
+        app:layout_constraintStart_toEndOf="@+id/imageView16"
+        app:layout_constraintTop_toBottomOf="@+id/button9"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/sell_book2" />
+
+
+    <ImageView
         android:id="@+id/imageView20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
