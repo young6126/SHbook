@@ -8,6 +8,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -22,6 +23,19 @@ public class BookDetailsActivity extends AppCompatActivity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.bookdetails);
+
+        Intent intent = getIntent();
+        String user_book_condition = intent.getStringExtra("condition");
+
+        TextView UBC = (TextView) findViewById(R.id.condition1);
+        UBC.setText("상태\t"+user_book_condition);
+
+        Intent intent1 = getIntent();
+        String user_book_price = intent1.getStringExtra("price");
+
+        TextView UBP = (TextView) findViewById(R.id.sellPrice1);
+        UBP.setText("판매가"+user_book_price+"원");
+
         seller1 = (ConstraintLayout)findViewById(R.id.seller1);
         mBtn_url = findViewById(R.id.sellerimg2);
         //사용자 중고

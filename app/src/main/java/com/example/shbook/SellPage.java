@@ -287,7 +287,14 @@ public class SellPage extends AppCompatActivity {
                 Intent intent2 = new Intent(getApplicationContext(), SellerDetailsActivity.class);
                 intent2.putExtra("text", strText);
                 intent2.putExtra("price", strPrice);
+                intent2.putExtra("condition",strStatus);
                 startActivity(intent2);
+                finish();
+
+                Intent intent3 = new Intent(getApplicationContext(), BookDetailsActivity.class);
+                intent3.putExtra("condition",strStatus);
+                intent3.putExtra("price",strPrice);
+                startActivity(intent3);
                 finish();
             }
         });
