@@ -7,6 +7,9 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
@@ -88,7 +91,7 @@ public class SellPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sell_page);
-
+        EditText BN = (EditText) findViewById(R.id.EditBookTitle);
 
         priceCompare = (Button)findViewById(R.id.BtnPriceCheck);
 
@@ -96,6 +99,15 @@ public class SellPage extends AppCompatActivity {
         String requsetCode = intent.getStringExtra("REQUEST_CODE");
 
         num = requsetCode;  //인식한 isbn 코드로 변경
+            Handler handler = new Handler(Looper.myLooper()) {
+                @Override
+                public void handleMessage(@NonNull Message msg) {
+                    Bundle bun = msg.getData();
+                    String book_name = bun.getString("book_name");
+                    BN.setText(book_name);
+                }
+            };
+
 
             new Thread() {
                 @Override
@@ -104,8 +116,11 @@ public class SellPage extends AppCompatActivity {
                         Document doc1 = (Document) Jsoup.connect("https://www.aladin.co.kr/shop/usedshop/wc2b_search.aspx?ActionType=1&SearchTarget=All&KeyWord=" + num + "&x=0&y=0/").get();
                         Elements bookName = doc1.select("a.c2b_b"); //제목
                         book_name = bookName.text().toString();
-                        EditText BN = (EditText) findViewById(R.id.EditBookTitle);
-                        BN.setText(book_name);
+                        Bundle bun = new Bundle();
+                        bun.putString("book_name",book_name);
+                        Message msg = handler.obtainMessage();
+                        msg.setData(bun);
+                        handler.sendMessage(msg);
 
                     } catch (IOException e) {
                         e.printStackTrace();

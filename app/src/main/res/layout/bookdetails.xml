@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-16dp">
+        tools:layout_editor_absoluteY="49dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -41,7 +41,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:text="안드로이드 프로그래밍(Android studio"
+                    android:text="안드로이드 프로그래밍(Android..."
                     android:textColor="#000000"
                     android:textSize="24sp"
                     android:textStyle="bold"
@@ -181,8 +181,9 @@
                     android:layout_marginStart="24dp"
                     android:layout_marginTop="20dp"
                     android:background="@drawable/edittext_round"
+                    android:foreground="@drawable/android_book"
+                    android:foregroundGravity="center"
                     android:gravity="center"
-                    android:text="아이콘"
                     android:textSize="12sp"
                     app:backgroundTint="#2196F3"
                     app:layout_constraintStart_toStartOf="parent"
@@ -223,6 +224,7 @@
                     android:textSize="14sp"
                     app:layout_constraintStart_toEndOf="@+id/sellerimg2"
                     app:layout_constraintTop_toBottomOf="@+id/sellPrice2" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

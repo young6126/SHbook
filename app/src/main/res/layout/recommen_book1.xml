@@ -91,11 +91,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
-                    android:layout_marginLeft="24dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="24dp"
-                    android:layout_marginRight="24dp"
-                    android:text="나는 지금도 가끔 눈을 감으면 셀을 만난다. 그는 무너져 내리는 도시를\n 지키며 소리 내어 웃고 있다. 파편들이 셀의 위로 떨어진다. 그리고 이상\n한 일이지만 그 풍경 속에는, 내가 아닌 라이오니가 있다. 죽어가는 셀의\n 곁에서 라이오니는 셀의 손을 잡는다. 둘은 멸망을 맞이하고 있지만 불\n행하지 않다... 자세히 보기"
+                    android:text="나는 지금도 가끔 눈을 감으면 셀을 만난다. 그는 무너져 내리는\n도시를 지키며 소리 내어 웃고 있다. 파편들이 셀의 위로 떨어진다. \n그리고 이상한 일이지만 그 풍경 속에는, 내가 아닌 라이오니가\n있다. 죽어가는 셀의 곁에서 라이오니는 셀의 손을 잡는다. \n둘은 멸망을 맞이하고 있지만 불행하지 않다."
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/avgPrice" />

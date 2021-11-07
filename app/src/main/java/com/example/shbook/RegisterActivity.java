@@ -8,8 +8,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -42,6 +44,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     private EditText mEtEmail, mEtPwd, mEtAge, mEtMainAdress, mEtMainAdress2, mEtFavorite; //회원가입 입력필드
     private Button mBtnRegister; //회원가입 버튼
+    private Button mBtnmale,mBtnfemale;
     private Spinner spinner1;
 
     private static final int SEARCH_ADDRESS_ACTIVITY = 10000; // 주소 요청코드 상수 request
@@ -78,7 +81,8 @@ public class RegisterActivity extends AppCompatActivity {
         mEtAge = findViewById(R.id.signinID3); //나이
         mEtMainAdress = findViewById(R.id.signinID4); //api text 주소검색
         mEtMainAdress2 = findViewById(R.id.signinID5); //상세주소
-
+        mBtnmale = findViewById(R.id.button8);
+        mBtnfemale = findViewById(R.id.button5);
 
         //성별,주소,선호장르 지정해야함.
         mBtnRegister = findViewById(R.id.nextBtn);
@@ -112,6 +116,25 @@ public class RegisterActivity extends AppCompatActivity {
                 Intent i = new Intent(getApplicationContext(), AddressApiActivity.class);
                 i.putExtra("requestCode", SEARCH_ADDRESS_ACTIVITY);
                 launcher.launch(i);
+            }
+        });
+
+        mBtnmale.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mBtnmale.setBackgroundResource(R.drawable.edittext_round_button_purple);
+                if (mBtnfemale.getBackground().getConstantState() != getResources().getDrawable(R.drawable.edittext_round_button).getConstantState()) {
+                    mBtnfemale.setBackgroundResource(R.drawable.edittext_round_button);
+                }
+            }
+        });
+        mBtnfemale.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mBtnfemale.setBackgroundResource(R.drawable.edittext_round_button_purple);
+                if (mBtnmale.getBackground().getConstantState() != getResources().getDrawable(R.drawable.edittext_round_button).getConstantState()) {
+                    mBtnmale.setBackgroundResource(R.drawable.edittext_round_button);
+                }
             }
         });
         mBtnRegister.setOnClickListener(new View.OnClickListener() {
