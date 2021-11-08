@@ -300,6 +300,7 @@ public class SellPage extends AppCompatActivity {
 
                 Intent intent2 = new Intent(getApplicationContext(), SearchMainActivity.class);
                 startActivity(intent2);
+                finish();
 
 
 /*

@@ -22,8 +22,8 @@ public class BookDetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.bookdetails);
+        /*
 
-/*
         Intent intent = getIntent();
         String user_book_condition = intent.getStringExtra("condition");
 
@@ -36,9 +36,11 @@ public class BookDetailsActivity extends AppCompatActivity {
         TextView UBP = (TextView) findViewById(R.id.sellPrice1);
         UBP.setText("판매가 "+user_book_price+"원");
 
-        seller1 = (ConstraintLayout)findViewById(R.id.seller1);
-        mBtn_url = findViewById(R.id.sellerimg2);
+
+        */
         //사용자 중고
+        mBtn_url = findViewById(R.id.sellerimg2);
+        seller1 = (ConstraintLayout)findViewById(R.id.seller1);
         seller1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -53,6 +55,9 @@ public class BookDetailsActivity extends AppCompatActivity {
                 startActivity(urlintent);
             }
         });
+
+
     }
+
 }
 

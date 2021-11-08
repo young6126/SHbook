@@ -52,7 +52,7 @@ public class SearchMainActivity extends AppCompatActivity {
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 if (actionId == EditorInfo.IME_ACTION_SEARCH) {
                     final String text = searchEdit.getText().toString();
-                    Intent intent = new Intent(getApplicationContext(),SearchResultActivity.class);
+                    Intent intent = new Intent(getApplicationContext(),searchLoadingActivity.class);
                     intent.putExtra("Searchhint",text);
                     startActivity(intent);
                     return true;
