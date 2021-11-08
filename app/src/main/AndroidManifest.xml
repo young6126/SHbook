@@ -10,7 +10,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:icon="@mipmap/seabookicon"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/seabookicon_round"
@@ -27,6 +27,7 @@
         <activity android:name=".RegisterActivity"/>
         <activity android:name=".AddressApiActivity"/>
         <activity android:name=".SearchMainActivity"/>
+        <activity android:name=".searchLoadingActivity"></activity>
         <activity android:name=".SearchResultActivity"/>
         <activity android:name=".BookDetailsActivity"/>
         <activity android:name=".SellerDetailsActivity"/>
